@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.color-buttons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pink { background-color: pink; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+
+.color-dot:hover {
+  transform: scale(1.2);
+}
+
+.logo-upload {
+  margin-top: 20px;
+}
+
+.upload-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute items evenly */
+  background-color: pink; /* Initial color for upload bar */
+  width: 200px; /* Adjust width as needed */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.upload-icon{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.cross-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cross-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.cross-button:hover img {
+  filter: brightness(0.5); /* Reduce brightness on hover */
+}
+
+#upload-img {
+  display: none; /* Initially hide the upload image */
+  position: absolute; /* Position absolutely within the .customizer container */
+  top: 65%; /* Align vertically in the middle */
+  left: 50%; /* Align horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the image precisely */
+  max-height: 18%; /* Set maximum height */
+  max-width: 18%; /* Set maximum width */
+}
+
+.customizer {
+  width: 50%;
+  margin-left: 20%;
+  height: 100vh; /* Set the height of the table to fill the viewport height */
+  position: relative; /* Position the .customizer container relative to its parent */
+}
+
+.upload-text p {
+  vertical-align: baseline;
+  margin-bottom: -8px; /* Adjust this value to change the space between the lines */
+}
+
+.umbrella-column {
+  width: 50%; /* Make the umbrella column take half of the table width */
+  vertical-align: middle; /* Vertically center the content */
+  position: relative; /* Position relative for loader positioning */
+}
+
+.controls-column {
+  width: 50%; /* Make the controls column take half of the table width */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+
+.color-buttons,
+.logo-upload {
+  margin-top: 20px; /* Add margin between the buttons and the file input */
+}
+
+.color-btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+#previewCanvas {
+  width: 100%; /* Make canvas fill its container */
+  margin: auto; /* Center the canvas horizontally */
+  display: block; /* Ensure canvas is displayed as block element */
+}
+
+.loader {
+  display: none; /* Hide the loader by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+}
+
+.loader img {
+  width: 50px; /* Adjust loader image size as needed */
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
