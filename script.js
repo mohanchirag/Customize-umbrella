@@ -21,32 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const logoInput = document.getElementById("logoInput");
-    const crossIcon = document.querySelector(".cross-icon");
-
-    // Hide cross icon by default
-    crossIcon.style.display = "none";
-
-    logoInput.addEventListener("change", function () {
-      const file = logoInput.files[0];
-      const fileLabel = document.querySelector(".file-label");
-
-      if (file) {
-        fileLabel.textContent = file.name; // Display file name as label
-        crossIcon.style.display = "block"; // Show cross icon
-      } else {
-        fileLabel.textContent = "Upload Photo"; // Set default placeholder text
-        crossIcon.style.display = "none"; // Hide cross icon
-      }
-    });
-  });
-
-
-  // Handle logo upload
-  const logoInput = document.getElementById("logoInput");
-  logoInput.addEventListener("change", handleLogoUpload);
-
   //update umbrealla color
   function drawUmbrella(color) {
     const img = new Image();
@@ -75,6 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+
+  // Handle logo upload
+  const logoInput = document.getElementById("logoInput");
+  logoInput.addEventListener("change", handleLogoUpload);
 
   function handleLogoUpload(event) {
     console.log(event);
