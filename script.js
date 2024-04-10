@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {
-        logoInput.src = e.target.result; // Use e.target.result instead of event.target.result
+        logoInput.src = e.target.result; 
         logoInput.style.display = "block";
       };
       reader.readAsDataURL(file);
